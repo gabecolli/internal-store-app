@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container">
+  <h1 class="title">Welcome, {{name}}!</h1>
+  
+  <form action="{{ url_for('new_customer') }}" method="post">
+    <input type="text" name="Customer Name" placeholder="customer name" required="required"/>
+    <input type="text" name="Address" placeholder="Address" required="required"/>
+    <input type="text" name="Phone Number" placeholder="Phone Number" required="required"/>
+    <input type="text" name="email" placeholder="email" required="required"/>
+    <input type="text" name="measurements taken?" placeholder="measurements taken?" required="required"/>
+    <button type="submit" class="btn btn-primary btn-block btn-large">Enter Customer</button>
+</form>
+</div>
+{% endblock %}
+
+
