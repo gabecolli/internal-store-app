@@ -38,7 +38,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="C:\Users\gabrielcolli\Downloads\Starting+Files+-+flask-auth-start\venv"
+VIRTUAL_ENV="C:\Users\gabrielcolli\OneDrive - Microsoft\Code\Python code\sales_cab_tracker\venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

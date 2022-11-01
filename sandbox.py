@@ -1,7 +1,20 @@
-import sqlite3
+from intuitlib.client import AuthClient
+from intuitlib.migration import migrate
+from intuitlib.enums import Scopes
+from intuitlib.exceptions import AuthClientError
 
-userdb = sqlite3.connect("user.db")
+REALM_ID = "4620816365251923790"
 
-user_cursor = userdb.cursor()
 
-#comment added to confirm pull request is working. testing again third try 4th try from a different account
+auth_client = AuthClient(
+    client_id="*******",
+    client_secret="********",
+    environment="sandbox",
+    redirect_uri="http://localhost:80",
+)
+
+url = auth_client.get_authorization_url([Scopes.ACCOUNTING])
+
+# auth_client.get_bearer_token(auth_code, realm_id=realm_id)
+
+
